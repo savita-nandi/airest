@@ -1,0 +1,10 @@
+27Oct25:
+--------
+Apache tomcat: apache-tomcat-10.0.11
+Maven: apache-maven-3.8.8
+Java : 21
+pgAdmin4: 17
+PostgreSQL: 12.11
+Postgresql hosted on Tigerdata
+OpenAI for Similarity search and RAG
+Tavily for WebSearch augmented to OpenAI
