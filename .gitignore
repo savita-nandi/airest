@@ -1,0 +1,12 @@
+
+## Ignore build artifacts and IDE files
+MY-README.txt
+credentials.properties
+/images/*
+/target/*
+.settings
+.classpath
+.factorypath
+.project
+.tern-project
+.gitattributes
