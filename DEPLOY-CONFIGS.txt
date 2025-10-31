@@ -8,3 +8,4 @@ PostgreSQL: 12.11
 Postgresql hosted on Tigerdata for RAG vector data, Helpdesk ticket creation & Chat Memory
 OpenAI API Key required: For LLM search
 Tavily API Key required: for AI RAG WebSearch
+Docker: Did not install. The setup required for installation of Grafana(To create a Dashboard from Prometheus),Prometheus(to pull metrics from Actuator) and Jaeger[To create Class call tracebility mapping]
