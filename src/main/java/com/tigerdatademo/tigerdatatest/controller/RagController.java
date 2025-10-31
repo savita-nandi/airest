@@ -1,4 +1,4 @@
-package com.tigerdatademo.tigerdatatest;
+package com.tigerdatademo.tigerdatatest.controller;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.tigerdatademo.tigerdatatest.model;
+package com.tigerdatademo.tigerdatatest.entity;
 
 import java.util.List;
 import java.util.UUID;

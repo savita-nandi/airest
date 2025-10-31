@@ -6,6 +6,7 @@ import java.util.Properties;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,8 +20,9 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import jakarta.persistence.EntityManagerFactory;
 
 @Configuration
-@ComponentScan(basePackages = {"com.tigerdatademo.tigerdatatest.model","com.tigerdatademo.tigerdatatest.rag"})
-@EnableJpaRepositories(basePackages = "com.tigerdatademo.tigerdatatest.model")
+@ComponentScan(basePackages = {"com.tigerdatademo.tigerdatatest.entity","com.tigerdatademo.tigerdatatest.rag"})
+@EnableJpaRepositories(basePackages = {"com.tigerdatademo.tigerdatatest.entity","com.tigerdatademo.tigerdatatest.repo"})
+@EntityScan("com.tigerdatademo.tigerdatatest.entity")
 @PropertySource("classpath:application.properties")
 public class AppConfig {
 	
@@ -33,13 +35,8 @@ public class AppConfig {
 	
 	@Value("${spring.datasource.username}")	
 	private String DbUsername;
-	
-    @Value("${spring.ai.tavily.api-key}")
-    private String tavilyApiKey;
-    
-    @Value("${spring.ai.tavily.url}")
-    private String tavilyUrl;
-	
+   
+    	
 	@Bean(name="entityManagerFactory")
 	public EntityManagerFactory getEntityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean lcemfb = new LocalContainerEntityManagerFactoryBean();
@@ -49,7 +46,7 @@ public class AppConfig {
 		lcemfb.setEntityManagerFactoryInterface(EntityManagerFactory.class);
 		lcemfb.setDataSource(getDataSource());		
 		
-		lcemfb.setPackagesToScan(new String[] { "com.tigerdatademo.tigerdatatest.model"});
+		lcemfb.setPackagesToScan(new String[] { "com.tigerdatademo.tigerdatatest.entity"});
 		
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		lcemfb.setJpaVendorAdapter(vendorAdapter);

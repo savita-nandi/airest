@@ -1,10 +1,10 @@
 27Oct25:
 --------
-Apache tomcat: apache-tomcat-10.0.11
+Apache tomcat: Tomcat 10, Not required as application deployed as Jar
 Maven: apache-maven-3.8.8
 Java : 21
 pgAdmin4: 17
 PostgreSQL: 12.11
-Postgresql hosted on Tigerdata
-OpenAI for Similarity search and RAG
-Tavily for WebSearch augmented to OpenAI
+Postgresql hosted on Tigerdata for RAG vector data, Helpdesk ticket creation & Chat Memory
+OpenAI API Key required: For LLM search
+Tavily API Key required: for AI RAG WebSearch

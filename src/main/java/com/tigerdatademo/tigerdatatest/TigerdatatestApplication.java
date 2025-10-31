@@ -23,12 +23,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.web.context.support.GenericWebApplicationContext;
 
-import com.tigerdatademo.tigerdatatest.model.VectorstoreRepo;
-import com.tigerdatademo.tigerdatatest.model.VectorstoreTbl;
-import com.tigerdatademo.tigerdatatest.model.Winedocs;
-import com.tigerdatademo.tigerdatatest.model.Winedocs2;
-import com.tigerdatademo.tigerdatatest.model.Winedocs2Repo;
-import com.tigerdatademo.tigerdatatest.model.WinedocsRepo;
+import com.tigerdatademo.tigerdatatest.entity.VectorstoreRepo;
+import com.tigerdatademo.tigerdatatest.entity.VectorstoreTbl;
+import com.tigerdatademo.tigerdatatest.entity.Winedocs;
+import com.tigerdatademo.tigerdatatest.entity.Winedocs2;
+import com.tigerdatademo.tigerdatatest.entity.Winedocs2Repo;
+import com.tigerdatademo.tigerdatatest.entity.WinedocsRepo;
 
 /*3Sep2025:
 
@@ -37,7 +37,7 @@ Reference: Spring + vectorize postgresql 17 data sample code in main method
  * */
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.tigerdatademo.tigerdatatest","com.tigerdatademo.tigerdatatest.model"})
+@ComponentScan(basePackages = {"com.tigerdatademo.tigerdatatest","com.tigerdatademo.tigerdatatest.entity"})
 public class TigerdatatestApplication {
 
 	private static final String DB_URL = "jdbc:postgresql://w7c25hbfqu.e491z0j1i7.tsdb.cloud.timescale.com:33821/tsdb?sslmode=require";

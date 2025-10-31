@@ -1,4 +1,4 @@
-package com.tigerdatademo.tigerdatatest.model;
+package com.tigerdatademo.tigerdatatest.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
